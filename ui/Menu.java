@@ -56,8 +56,12 @@ public class Menu extends JFrame {
         panel.add(btnSearch);
         JButton btnShow = Utils.createButton("Display All Accounts", 150, 220 + 180, 200, 45);
         panel.add(btnShow);
-        JButton btnExit = Utils.createButton("Exit", 150, 220 + 240, 200, 45);
+        JButton btnDelete = Utils.createButton("Delete Account", 150, 220 + 240, 200, 45);
+        panel.add(btnDelete);
+        JButton btnExit = Utils.createButton("Exit", 150, 220 + 300, 200, 45);
         panel.add(btnExit);
+
+        btnExit.addActionListener(e -> System.exit(0));
 
         this.setVisible(true);
     }
