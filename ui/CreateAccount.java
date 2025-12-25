@@ -87,12 +87,14 @@ public class CreateAccount extends MainFrame {
         panel.add(btnExit);
 
         btnExit.addActionListener(e -> this.dispose());
-        btnSubmit.addActionListener(e -> {
-            //handle account creation logic here
 
-            JOptionPane.showMessageDialog(this, "Account Created Successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
+        btnSubmit.addActionListener(e -> {
+            // handle account creation logic here
+
+            Utils.showMessage(this, "Account Created Successfully!", "Success");
             this.dispose();
         });
+
 
 
 

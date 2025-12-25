@@ -34,6 +34,10 @@ public class Menu extends MainFrame {
             new CreateAccount();
         });
 
+        btnLogin.addActionListener(e -> {
+            new Login();
+        });
+
         btnExit.addActionListener(e -> System.exit(0));
 
         this.setVisible(true);
