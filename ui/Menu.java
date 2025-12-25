@@ -1,7 +1,6 @@
 package ui;
-import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
+import javax.swing.*;
 
 public class Menu extends JFrame {
 
@@ -60,7 +59,10 @@ public class Menu extends JFrame {
         panel.add(btnDelete);
         JButton btnExit = Utils.createButton("Exit", 150, 220 + 300, 200, 45);
         panel.add(btnExit);
-
+        btnCreate.addActionListener(e -> {
+            this.dispose();
+            new CreateAccount();
+        });
         btnExit.addActionListener(e -> System.exit(0));
 
         this.setVisible(true);
