@@ -89,4 +89,36 @@ public class Utils {
         passwordField.setCaretColor(Utils.SUBHEADING_COLOR);
         return passwordField;
     }
+
+    //* Show Message
+    public static void showMessage(JFrame frame, String message, String title) {
+        JDialog dialog = new JDialog(frame, title, true);
+        dialog.setSize(350, 150);
+        dialog.setLayout(new BorderLayout());
+        dialog.setResizable(false);
+        dialog.setLocationRelativeTo(frame);
+
+        // Panel
+        JPanel panel = new JPanel(new BorderLayout());
+        panel.setBackground(Utils.FRAME_BG);
+        panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+
+        // Message
+        JLabel label = new JLabel(message, JLabel.CENTER);
+        label.setForeground(Utils.HEADING_COLOR);
+        label.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        panel.add(label, BorderLayout.CENTER);
+
+        // OK Button
+        JButton okButton = Utils.createButton("OK", 0, 0, 80, 30);
+        okButton.addActionListener(e -> dialog.dispose());
+        JPanel btnPanel = new JPanel();
+        btnPanel.setBackground(Utils.FRAME_BG);
+        btnPanel.add(okButton);
+        panel.add(btnPanel, BorderLayout.SOUTH);
+
+        dialog.add(panel);
+        dialog.setVisible(true);
+    }
+
 }
