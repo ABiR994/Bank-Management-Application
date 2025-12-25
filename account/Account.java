@@ -37,10 +37,6 @@ public abstract class Account {
         return balance;
     }
 
-    public boolean checkPassword(String input) {
-        return password.equals(input);
-    }
-
     public void deposit(double amount) {
         balance += amount;
     }
