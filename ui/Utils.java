@@ -3,16 +3,18 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Utils extends JFrame {
+public class Utils {
+    //* Colors
     public static final Color FRAME_BG = new Color(0x0B0B0B);
     public static final Color PANEL_BG = new Color(0x151515);
-    public static final Color HEADING = new Color(0xF5C542);
-    public static final Color SUBHEADING = new Color(0xB0B0B0);
+    public static final Color HEADING_COLOR = new Color(0xF5C542);
+    public static final Color SUBHEADING_COLOR = new Color(0xB0B0B0);
     public static final Color BUTTON_BG = new Color(0xF5C542);
     public static final Color BUTTON_HOVER = new Color(0xFFD966);
     public static final Color BUTTON_PRESS = new Color(0xD4AF37);
-    public static final Color TEXT = new Color(0x0B0B0B);
+    public static final Color TEXT_COLOR = new Color(0x0B0B0B);
     public static final Color TEXTFIELD_BG = new Color(0x1E1E1E);
+    public static final Color TEXTFIELD_FG = new Color(0xFFFFFF);
 
     //* Create Button
     public static JButton createButton(String text, int x, int y, int w, int h) {
@@ -25,7 +27,7 @@ public class Utils extends JFrame {
         button.setOpaque(true);
 
         button.setBackground(BUTTON_BG);
-        button.setForeground(TEXT);
+        button.setForeground(TEXT_COLOR);
 
         button.addMouseListener(new MouseAdapter() {
 
@@ -51,5 +53,40 @@ public class Utils extends JFrame {
 
 
         return button;
+    }
+
+
+    //*Create Label
+    public static JLabel createLabel(String text, int x, int y, int w, int h, int horizontalAlignment, Color color, Font font) {
+        JLabel label = new JLabel(text);
+        label.setBounds(x, y, w, h);
+        label.setHorizontalAlignment(horizontalAlignment);
+        label.setForeground(color);
+        label.setFont(font);
+        return label;
+    }
+
+    //* Create TextField
+    public static JTextField createTextField(int x, int y, int w, int h) {
+        JTextField textField = new JTextField();
+        textField.setBounds(x, y, w, h);
+        textField.setBackground(Utils.TEXTFIELD_BG);
+        textField.setForeground(Utils.TEXTFIELD_FG);
+        textField.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        textField.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
+        textField.setCaretColor(Utils.SUBHEADING_COLOR);
+        return textField;
+    }
+
+    //* Create PasswordField
+    public static JPasswordField createPasswordField(int x, int y, int w, int h) {
+        JPasswordField passwordField = new JPasswordField();
+        passwordField.setBounds(x, y, w, h);
+        passwordField.setBackground(Utils.TEXTFIELD_BG);
+        passwordField.setForeground(Utils.TEXTFIELD_FG);
+        passwordField.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        passwordField.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
+        passwordField.setCaretColor(Utils.SUBHEADING_COLOR);
+        return passwordField;
     }
 }
