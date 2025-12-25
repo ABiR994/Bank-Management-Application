@@ -96,8 +96,8 @@ public class CreateAccount extends MainFrame {
 
 
 
-    this.setVisible(true);
+        this.setVisible(true);
 
 
-    }  
+    }
 }
