@@ -77,4 +77,16 @@ public class Utils {
         textField.setCaretColor(Utils.SUBHEADING_COLOR);
         return textField;
     }
+
+    //* Create PasswordField
+    public static JPasswordField createPasswordField(int x, int y, int w, int h) {
+        JPasswordField passwordField = new JPasswordField();
+        passwordField.setBounds(x, y, w, h);
+        passwordField.setBackground(Utils.TEXTFIELD_BG);
+        passwordField.setForeground(Utils.TEXTFIELD_FG);
+        passwordField.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        passwordField.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
+        passwordField.setCaretColor(Utils.SUBHEADING_COLOR);
+        return passwordField;
+    }
 }

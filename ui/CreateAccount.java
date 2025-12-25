@@ -70,13 +70,7 @@ public class CreateAccount extends MainFrame {
         JLabel passwordLabel = Utils.createLabel("Password:", 90, 430, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(passwordLabel);
 
-        JPasswordField passwordField = new JPasswordField();
-        passwordField.setBounds(240, 430, 200, 28);
-        passwordField.setBackground(Utils.TEXTFIELD_BG);
-        passwordField.setForeground(Utils.TEXTFIELD_FG);
-        passwordField.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 14));
-        passwordField.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
-        passwordField.setCaretColor(Utils.SUBHEADING_COLOR);
+        JPasswordField passwordField = Utils.createPasswordField(240, 430, 200, 28);
         panel.add(passwordField);
 
         //!Initial Deposit Label and TextField
