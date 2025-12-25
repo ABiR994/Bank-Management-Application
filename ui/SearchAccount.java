@@ -1,6 +1,8 @@
 package ui;
 import java.awt.*;
 import javax.swing.*;
+import utils.*;
+
 public class SearchAccount extends MainFrame {
 
     public SearchAccount() {
@@ -19,6 +21,7 @@ public class SearchAccount extends MainFrame {
         //!Search and Exit buttons
         JButton btnSearch = Utils.createButton("Search", 150, 250, 100, 40);
         panel.add(btnSearch);
+
         JButton btnExit = Utils.createButton("Exit", 270, 250, 100, 40);
         panel.add(btnExit);
 

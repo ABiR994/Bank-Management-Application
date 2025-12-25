@@ -1,6 +1,7 @@
 package ui;
 import java.awt.*;
 import javax.swing.*;
+import utils.*;
 
 public class DeleteAccount extends MainFrame {
 

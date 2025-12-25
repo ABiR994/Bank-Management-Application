@@ -1,8 +1,8 @@
 package ui;
 import java.awt.*;
 import javax.swing.*;
-
-import data.AccountFileHandler;
+import utils.*;
+import data.*;
 
 public class CreateAccount extends MainFrame {
     public CreateAccount() {

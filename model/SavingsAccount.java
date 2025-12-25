@@ -1,4 +1,4 @@
-package account;
+package model;
 
 public class SavingsAccount extends Account {
     public SavingsAccount(String acc, String name, String pass, String email, String phoneNum,double balance) {

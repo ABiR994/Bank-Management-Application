@@ -1,6 +1,7 @@
 package ui;
 import javax.swing.*;
 import java.awt.*;
+import utils.*;
 
 public class Transaction extends MainFrame {
 
@@ -29,6 +30,16 @@ public class Transaction extends MainFrame {
         panel.add(btnExit);
 
         btnExit.addActionListener(e -> this.dispose());
+
+        btnDeposit.addActionListener(e -> {
+            new Deposit(accountData);
+            this.dispose();
+        });
+
+        btnWithdraw.addActionListener(e -> {
+            new Withdraw(accountData);
+            this.dispose();
+        });
 
         this.setVisible(true);
     }
