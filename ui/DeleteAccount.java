@@ -20,7 +20,7 @@ public class DeleteAccount extends MainFrame {
         JLabel passwordLabel = Utils.createLabel("Password:", 90, 250, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(passwordLabel);
         JPasswordField passwordField = Utils.createPasswordField(240, 250, 200, 28);
-        panel.add(passwordField);   
+        panel.add(passwordField);
 
         //!Delete and Exit buttons
         JButton btnDelete = Utils.createButton("Delete", 150, 300, 100, 40);
@@ -38,5 +38,5 @@ public class DeleteAccount extends MainFrame {
 
         this.setVisible(true);
     }
-    
+
 }

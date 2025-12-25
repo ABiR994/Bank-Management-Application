@@ -41,18 +41,10 @@ public class CreateAccount extends MainFrame {
         JLabel typeLabel = Utils.createLabel("Account Type:", 90, 350, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(typeLabel);
 
-        JRadioButton checkingButton = new JRadioButton("Checking");
-        checkingButton.setBounds(240, 350, 100, 25);
-        checkingButton.setBackground(Utils.FRAME_BG);
-        checkingButton.setForeground(Utils.SUBHEADING_COLOR);
-        checkingButton.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        JRadioButton checkingButton = Utils.createRadioButton("Checking", 240, 350, 100, 25);
         panel.add(checkingButton);
 
-        JRadioButton savingButton = new JRadioButton("Saving");
-        savingButton.setBounds(350, 350, 100, 25);
-        savingButton.setBackground(Utils.FRAME_BG);
-        savingButton.setForeground(Utils.SUBHEADING_COLOR);
-        savingButton.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        JRadioButton savingButton = Utils.createRadioButton("Savings", 350, 350, 100, 25);
         panel.add(savingButton);
 
         ButtonGroup accountTypeGroup = new ButtonGroup();

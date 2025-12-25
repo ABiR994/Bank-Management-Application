@@ -90,9 +90,23 @@ public class Utils {
         return passwordField;
     }
 
+    //* Create RadioButton
+    public static JRadioButton createRadioButton(String text, int x, int y, int w, int h) {
+        JRadioButton radioButton = new JRadioButton(text);
+        radioButton.setBounds(x, y, w, h);
+        radioButton.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        radioButton.setBackground(Utils.FRAME_BG);
+        radioButton.setForeground(Utils.SUBHEADING_COLOR);
+        radioButton.setFocusPainted(false);
+        radioButton.setBorderPainted(false);
+        radioButton.setContentAreaFilled(false);
+        radioButton.setOpaque(true);
+        return radioButton;
+    }
+
     //* Show Message
     public static void showMessage(JFrame frame, String message, String title) {
-       
+
         JDialog dialog = new JDialog(frame, title, true);
         dialog.setSize(350, 150);
         dialog.setLayout(new BorderLayout());
