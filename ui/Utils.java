@@ -1,7 +1,7 @@
 package ui;
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import javax.swing.*;
 
 public class Utils {
     //* Colors
@@ -92,6 +92,7 @@ public class Utils {
 
     //* Show Message
     public static void showMessage(JFrame frame, String message, String title) {
+       
         JDialog dialog = new JDialog(frame, title, true);
         dialog.setSize(350, 150);
         dialog.setLayout(new BorderLayout());

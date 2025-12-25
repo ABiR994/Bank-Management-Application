@@ -36,7 +36,15 @@ public class Menu extends MainFrame {
         btnLogin.addActionListener(e -> {
             new Login();
         });
-
+        btnSearch.addActionListener(e -> {
+            new SearchAccount();
+        });
+        btnDelete.addActionListener(e -> {
+            new DeleteAccount();
+        });
+        btnShow.addActionListener(e -> {
+            new ShowAccounts();
+        }); 
         btnExit.addActionListener(e -> System.exit(0));
 
         this.setVisible(true);
