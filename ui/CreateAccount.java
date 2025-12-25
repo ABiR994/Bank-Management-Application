@@ -2,6 +2,8 @@ package ui;
 import java.awt.*;
 import javax.swing.*;
 
+import data.AccountFileHandler;
+
 public class CreateAccount extends MainFrame {
     public CreateAccount() {
 
@@ -21,6 +23,7 @@ public class CreateAccount extends MainFrame {
         panel.add(dobLabel);
 
         JTextField dobField = Utils.createTextField(240, 230, 200, 28);
+        dobField.setText("DD/MM/YYYY");
         panel.add(dobField);
 
         //!Phone Number Label and TextField
@@ -41,10 +44,10 @@ public class CreateAccount extends MainFrame {
         JLabel typeLabel = Utils.createLabel("Account Type:", 90, 350, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(typeLabel);
 
-        JRadioButton checkingButton = Utils.createRadioButton("Checking", 240, 350, 100, 25);
+        JRadioButton checkingButton = Utils.createRadioButton("Saving", 240, 350, 100, 25);
         panel.add(checkingButton);
 
-        JRadioButton savingButton = Utils.createRadioButton("Savings", 350, 350, 100, 25);
+        JRadioButton savingButton = Utils.createRadioButton("Checking", 350, 350, 100, 25);
         panel.add(savingButton);
 
         ButtonGroup accountTypeGroup = new ButtonGroup();
@@ -81,11 +84,23 @@ public class CreateAccount extends MainFrame {
         btnExit.addActionListener(e -> this.dispose());
 
         btnSubmit.addActionListener(e -> {
-            // handle account creation logic here
+
+            String name = nameField.getText();
+            String acc = accNumField.getText();
+            String pass = new String(passwordField.getPassword());
+            String email = emailField.getText();
+            String phone = phoneField.getText();
+            double deposit = Double.parseDouble(depositField.getText());
+
+            String type = savingButton.isSelected() ? "Saving" : "Checking";
+
+            String record = acc + "," + name + "," + pass + "," + type + "," + email + "," + phone + "," + deposit;
+            AccountFileHandler.saveAccount(record);
 
             Utils.showMessage(this, "Account Created Successfully!", "Success");
             this.dispose();
         });
+
 
 
 

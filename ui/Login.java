@@ -2,6 +2,7 @@ package ui;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import data.*;
 
 public class Login extends MainFrame {
     public Login() {
@@ -32,10 +33,20 @@ public class Login extends MainFrame {
         btnExit.addActionListener(e -> this.dispose());
 
         btnLogin.addActionListener(e -> {
-            // handle login logic here
-            new Transaction();
-            this.dispose();
+
+            String accNo = accNumField.getText();
+            String pass = new String(passwordField.getPassword());
+
+            String accountData = AccountFileHandler.findAccount(accNo, pass);
+
+            if (accountData != null) {
+                new Transaction(accountData);
+                this.dispose();
+            } else {
+                Utils.showMessage(this, "Invalid account number or password!", "Login Failed");
+            }
         });
+
 
         this.setVisible(true);
     }
