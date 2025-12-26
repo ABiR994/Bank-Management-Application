@@ -119,9 +119,7 @@ public class Utils {
         panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
         // Message
-        JLabel label = new JLabel(message, JLabel.CENTER);
-        label.setForeground(Utils.HEADING_COLOR);
-        label.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        JLabel label = Utils.createLabel(message, 0, 0, 0, 0, JLabel.CENTER, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(label, BorderLayout.CENTER);
 
         // OK Button
@@ -134,6 +132,11 @@ public class Utils {
 
         dialog.add(panel);
         dialog.setVisible(true);
+    }
+
+    //* Center Logo
+    public static int centerLogo(int frameWidth, int LogoWidth) {
+        return (frameWidth - LogoWidth) / 2;
     }
 
 }

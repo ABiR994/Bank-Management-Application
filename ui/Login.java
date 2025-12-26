@@ -7,9 +7,7 @@ import data.*;
 
 public class Login extends MainFrame {
     public Login() {
-        super("Login to your Account", "Login to your Bank Account", 550, 500, false, 40, 110, 470, 30);
-
-        MainFrame.logo(250, 40);
+        super("Login to your Account", "Login to your Bank Account", 550, 500, false, 0, 110, 550, 30);
 
         //!Account Number Label and TextField
         JLabel accNumLabel = Utils.createLabel("Account Number:", 90, 200, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
@@ -26,9 +24,9 @@ public class Login extends MainFrame {
         panel.add(passwordField);
 
         //!Login and Exit buttons
-        JButton btnLogin = Utils.createButton("Login", 150, 330, 100, 40);
+        JButton btnLogin = Utils.createButton("Login", 165, 330, 100, 40);
         panel.add(btnLogin);
-        JButton btnExit = Utils.createButton("Exit", 270, 330, 100, 40);
+        JButton btnExit = Utils.createButton("Exit", 285, 330, 100, 40);
         panel.add(btnExit);
 
         btnExit.addActionListener(e -> this.dispose());

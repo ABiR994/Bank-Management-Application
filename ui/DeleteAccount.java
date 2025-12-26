@@ -7,9 +7,7 @@ public class DeleteAccount extends MainFrame {
 
     public DeleteAccount() {
 
-        super("Delete Bank Account", "Delete your Bank Account", 550, 500, false, 40, 110, 470, 30);
-
-        MainFrame.logo(250, 40);
+        super("Delete Bank Account", "Delete your Bank Account", 550, 500, false, 0, 110, 550, 30);
 
         //!Account Number Label and TextField
         JLabel accNumLabel = Utils.createLabel("Account Number:", 90, 200, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
@@ -24,9 +22,9 @@ public class DeleteAccount extends MainFrame {
         panel.add(passwordField);
 
         //!Delete and Exit buttons
-        JButton btnDelete = Utils.createButton("Delete", 150, 300, 100, 40);
+        JButton btnDelete = Utils.createButton("Delete", 165, 330, 100, 40);
         panel.add(btnDelete);
-        JButton btnExit = Utils.createButton("Exit", 270, 300, 100, 40);
+        JButton btnExit = Utils.createButton("Exit", 285, 330, 100, 40);
         panel.add(btnExit);
 
         btnExit.addActionListener(e -> this.dispose());

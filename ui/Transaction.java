@@ -8,9 +8,7 @@ public class Transaction extends MainFrame {
     private String[] account;
 
     public Transaction(String accountData) {
-        super("Transaction", "Transaction Menu", 500, 500, false, 40, 105, 420, 30);
-
-        MainFrame.logo(225, 40);
+        super("Transaction", "Transaction Menu", 500, 500, false, 0, 105, 500, 30);
 
         //! Split account data
         account = accountData.split(",");

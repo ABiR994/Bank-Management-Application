@@ -5,9 +5,7 @@ import utils.*;
 
 public class ShowAccounts extends MainFrame {
     public ShowAccounts() {
-        super("All Bank Accounts", "Displaying All Bank Accounts", 550, 500, false, 40, 110, 470, 30);
-
-        MainFrame.logo(250, 40);
+        super("All Bank Accounts", "Displaying All Bank Accounts", 550, 500, false, 0, 110, 550, 30);
 
         JLabel infoLabel = Utils.createLabel("List of all bank accounts will be displayed here.", 90, 200, 350, 25, JLabel.CENTER, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(infoLabel);

@@ -6,8 +6,7 @@ import utils.*;
 
 public class Withdraw extends MainFrame {
     public Withdraw(String accountData) {
-        super("Withdraw", "Enter Amount to Withdraw", 550, 400, false, 40, 110, 470, 30);
-        MainFrame.logo(250, 40);
+        super("Withdraw", "Enter Amount to Withdraw", 550, 400, false, 0, 110, 550, 30);
 
         //! Label and TextField
         JLabel withdrawLabel = Utils.createLabel("Withdraw Amount:", 90, 180, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));

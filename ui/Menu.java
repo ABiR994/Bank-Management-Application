@@ -7,9 +7,7 @@ public class Menu extends MainFrame {
 
     public Menu() {
 
-        super("Bank Management Application", "Welcome to the Bank Management Application", 500, 750, true, 40, 105, 420, 30);
-
-        MainFrame.logo(225, 40);
+        super("Bank Management Application", "Welcome to the Bank Management Application", 500, 750, true, 0, 105, 500, 30);
 
         //!Subheading
         JLabel subHeading = Utils.createLabel("Your Trusted Financial Partner", 50, 150, 400, 25, JLabel.CENTER, Utils.SUBHEADING_COLOR, new Font("Segoe UI", Font.PLAIN, 14));

@@ -7,9 +7,7 @@ public class SearchAccount extends MainFrame {
 
     public SearchAccount() {
 
-        super("Search Bank Account", "Search for a Bank Account", 550, 400, false, 40, 110, 470, 30);
-
-        MainFrame.logo(250, 40);
+        super("Search Bank Account", "Search for a Bank Account", 550, 400, false, 0, 110, 550, 30);
 
         //!Account Number Label and TextField
         JLabel accNumLabel = Utils.createLabel("Account Number:", 90, 180, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
@@ -19,10 +17,10 @@ public class SearchAccount extends MainFrame {
         panel.add(accNumField);
 
         //!Search and Exit buttons
-        JButton btnSearch = Utils.createButton("Search", 150, 250, 100, 40);
+        JButton btnSearch = Utils.createButton("Search", 165, 250, 100, 40);
         panel.add(btnSearch);
 
-        JButton btnExit = Utils.createButton("Exit", 270, 250, 100, 40);
+        JButton btnExit = Utils.createButton("Exit", 285, 250, 100, 40);
         panel.add(btnExit);
 
         btnExit.addActionListener(e -> this.dispose());

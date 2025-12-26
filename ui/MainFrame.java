@@ -7,40 +7,35 @@ import utils.*;
 public class MainFrame extends JFrame {
 
     protected static JPanel panel;
-    protected static JLabel label;
+    protected static JLabel logoLabel;
 
-    public MainFrame(String title, String headingText, int f_width, int f_height, boolean exit, int h_x, int h_y, int h_width, int h_height) {
-        //!Frame Settings
+    public MainFrame(String title, String headingText, int frameWidth, int frameHeight, boolean exit, int h_x, int h_y, int h_width, int h_height) {
+
+        //! Frame settings
         this.setTitle(title);
+        this.setSize(frameWidth, frameHeight);
         this.setLayout(null);
-        this.setSize(f_width, f_height);
         this.setResizable(false);
-        if (exit == true) {
-            this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        } else {
-            this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        }
         this.setLocationRelativeTo(null);
+        this.setDefaultCloseOperation(exit ? JFrame.EXIT_ON_CLOSE : JFrame.DISPOSE_ON_CLOSE);
 
-        //!Application Icon
+        //! Icon
         ImageIcon icon = new ImageIcon("assets/logo(60x60).png");
         this.setIconImage(icon.getImage());
 
-        //!Panel
+        //! Panel
         panel = new JPanel(null);
         panel.setBackground(Utils.FRAME_BG);
         this.setContentPane(panel);
 
-        //!Heading
+        //! Heading
         JLabel heading = Utils.createLabel(headingText, h_x, h_y, h_width, h_height, JLabel.CENTER, Utils.HEADING_COLOR, new Font("Segoe UI", Font.BOLD, 18));
         panel.add(heading);
-    }
 
-    //!Logo
-    public static void logo(int l_x, int l_y) {
+        //! Logo
         ImageIcon logo = new ImageIcon("assets/logo(50x50).png");
-        label = new JLabel(logo);
-        label.setBounds(l_x, l_y, 50, 50);
-        panel.add(label);
+        logoLabel = new JLabel(logo);
+        logoLabel.setBounds(Utils.centerLogo(frameWidth, 50), 40, 50, 50);
+        panel.add(logoLabel);
     }
 }
