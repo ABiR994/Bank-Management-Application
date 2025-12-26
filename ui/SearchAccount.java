@@ -11,11 +11,8 @@ public class SearchAccount extends MainFrame {
         super("Search Bank Account", "Search for a Bank Account", 550, 400, false, 0, 110, 550, 30);
 
         //!Account Number Label and TextField
-        JLabel accNumLabel = Utils.createLabel("Account Number", 90, 180, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        JLabel accNumLabel = Utils.createLabel(Utils.arrLabel[0], 90, 180, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(accNumLabel);
-
-        JLabel accNumColon = Utils.createColonLabel(220, 180, 20, 28);
-        panel.add(accNumColon);
 
         JTextField accNumField = Utils.createTextField(240, 180, 200, 28);
         panel.add(accNumField);

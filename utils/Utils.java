@@ -16,6 +16,8 @@ public class Utils {
     public static final Color TEXTFIELD_BG = new Color(0x1E1E1E);
     public static final Color TEXTFIELD_FG = new Color(0xFFFFFF);
 
+    public static String[] arrLabel = {"Account Number :", "Full Name             :", "Password              :", "Account Type       :", "Email Address      :", "Phone Number    :", "Balance                 :", "Initial Deposit      :", "Date of Birth        :"};
+
     //* Create Button
     public static JButton createButton(String text, int x, int y, int w, int h) {
         JButton button = new JButton(text);
@@ -56,7 +58,7 @@ public class Utils {
     }
 
 
-    //*Create Label
+    //* Create Label
     public static JLabel createLabel(String text, int x, int y, int w, int h, int horizontalAlignment, Color color, Font font) {
         JLabel label = new JLabel(text);
         label.setBounds(x, y, w, h);
@@ -64,16 +66,6 @@ public class Utils {
         label.setForeground(color);
         label.setFont(font);
         return label;
-    }
-
-    //* Colon Label
-    public static JLabel createColonLabel(int x, int y, int w, int h) {
-        JLabel colonLabel = new JLabel(":");
-        colonLabel.setBounds(x, y, w, h);
-        colonLabel.setHorizontalAlignment(JLabel.CENTER);
-        colonLabel.setForeground(Utils.SUBHEADING_COLOR);
-        colonLabel.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 14));
-        return colonLabel;
     }
 
     //* Create TextField

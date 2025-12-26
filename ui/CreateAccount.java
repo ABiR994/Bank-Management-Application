@@ -10,52 +10,37 @@ public class CreateAccount extends MainFrame {
         super("Create New Account", "Create a New Bank Account", 550, 750, false, 0, 110, 550, 30);
 
         //!Name Label and TextField
-        JLabel nameLabel = Utils.createLabel("Full Name", 90, 190, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        JLabel nameLabel = Utils.createLabel(Utils.arrLabel[1], 90, 190, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(nameLabel);
-
-        JLabel nameColon = Utils.createColonLabel(220, 190, 20, 28);
-        panel.add(nameColon);
 
         JTextField nameField = Utils.createTextField(240, 190, 200, 28);
         panel.add(nameField);
 
         //!Date of Birth Label and TextField
-        JLabel dobLabel = Utils.createLabel("Date of Birth", 90, 230, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        JLabel dobLabel = Utils.createLabel(Utils.arrLabel[8], 90, 230, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(dobLabel);
-
-        JLabel dobColon = Utils.createColonLabel(220, 230, 20, 28);
-        panel.add(dobColon);
 
         JTextField dobField = Utils.createTextField(240, 230, 200, 28);
         dobField.setText("DD/MM/YYYY");
         panel.add(dobField);
 
-        //!Phone Number Label and TextField
-        JLabel phoneLabel = Utils.createLabel("Phone Number", 90, 270, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
-        panel.add(phoneLabel);
-
-        JLabel phoneColon = Utils.createColonLabel(220, 270, 20, 28);
-        panel.add(phoneColon);
-
-        JTextField phoneField = Utils.createTextField(240, 270, 200, 28);
-        panel.add(phoneField);
-
-        //!Email
-        JLabel emailLabel = Utils.createLabel("Email Address", 90, 310, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        //!Email Label and TextField
+        JLabel emailLabel = Utils.createLabel(Utils.arrLabel[4], 90, 270, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(emailLabel);
 
-        JLabel emailColon = Utils.createColonLabel(220, 310, 20, 28);
-        panel.add(emailColon);
-
-        JTextField emailField = Utils.createTextField(240, 310, 200, 28);
+        JTextField emailField = Utils.createTextField(240, 270, 200, 28);
         panel.add(emailField);
 
-        //!Acount Type
-        JLabel typeLabel = Utils.createLabel("Account Type", 90, 350, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
-        panel.add(typeLabel);
+        //!Phone Number Label and TextField
+        JLabel phoneLabel = Utils.createLabel(Utils.arrLabel[5], 90, 310, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        panel.add(phoneLabel);
 
-        JLabel typeColon = Utils.createColonLabel(220, 350, 20, 28);
-        panel.add(typeColon);
+        JTextField phoneField = Utils.createTextField(240, 310, 200, 28);
+        panel.add(emailField);
+
+        //!Acount Type Label and RadioButton
+        JLabel typeLabel = Utils.createLabel(Utils.arrLabel[3], 90, 350, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        panel.add(typeLabel);
 
         JRadioButton checkingButton = Utils.createRadioButton("Savings", 240, 350, 100, 25);
         panel.add(checkingButton);
@@ -68,31 +53,22 @@ public class CreateAccount extends MainFrame {
         accountTypeGroup.add(checkingButton);
 
         //!Account Number Label and TextField
-        JLabel accNumLabel = Utils.createLabel("Account Number", 90, 390, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        JLabel accNumLabel = Utils.createLabel(Utils.arrLabel[0], 90, 390, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(accNumLabel);
-
-        JLabel accNumColon = Utils.createColonLabel(220, 390, 20, 28);
-        panel.add(accNumColon);
 
         JTextField accNumField = Utils.createTextField(240, 390, 200, 28);
         panel.add(accNumField);
 
         //!Password Label and PasswordField
-        JLabel passwordLabel = Utils.createLabel("Password", 90, 430, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        JLabel passwordLabel = Utils.createLabel(Utils.arrLabel[2], 90, 430, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(passwordLabel);
-
-        JLabel passwordColon = Utils.createColonLabel(220, 430, 20, 28);
-        panel.add(passwordColon);
 
         JPasswordField passwordField = Utils.createPasswordField(240, 430, 200, 28);
         panel.add(passwordField);
 
         //!Initial Deposit Label and TextField
-        JLabel depositLabel = Utils.createLabel("Initial Deposit", 90, 470, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        JLabel depositLabel = Utils.createLabel(Utils.arrLabel[7], 90, 470, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(depositLabel);
-
-        JLabel depositColon = Utils.createColonLabel(220, 470, 20, 28);
-        panel.add(depositColon);
 
         JTextField depositField = Utils.createTextField(240, 470, 200, 28);
         panel.add(depositField);

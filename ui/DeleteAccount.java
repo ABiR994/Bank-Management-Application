@@ -10,21 +10,15 @@ public class DeleteAccount extends MainFrame {
         super("Delete Bank Account", "Delete your Bank Account", 550, 500, false, 0, 110, 550, 30);
 
         //!Account Number Label and TextField
-        JLabel accNumLabel = Utils.createLabel("Account Number", 90, 200, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        JLabel accNumLabel = Utils.createLabel(Utils.arrLabel[0], 90, 200, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(accNumLabel);
-
-        JLabel accNumColon = Utils.createColonLabel(220, 200, 20, 28);
-        panel.add(accNumColon);
 
         JTextField accNumField = Utils.createTextField(240, 200, 200, 28);
         panel.add(accNumField);
 
         //!Password Label and PasswordField
-        JLabel passwordLabel = Utils.createLabel("Password", 90, 250, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        JLabel passwordLabel = Utils.createLabel(Utils.arrLabel[2], 90, 250, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(passwordLabel);
-
-        JLabel passwordColon = Utils.createColonLabel(220, 250, 20, 28);
-        panel.add(passwordColon);
 
         JPasswordField passwordField = Utils.createPasswordField(240, 250, 200, 28);
         panel.add(passwordField);

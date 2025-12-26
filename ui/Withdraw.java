@@ -9,11 +9,8 @@ public class Withdraw extends MainFrame {
         super("Withdraw", "Enter Amount to Withdraw", 550, 400, false, 0, 110, 550, 30);
 
         //! Label and TextField
-        JLabel withdrawLabel = Utils.createLabel("Withdraw Amount:", 90, 180, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        JLabel withdrawLabel = Utils.createLabel("Withdraw Amount :", 90, 180, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(withdrawLabel);
-
-        JLabel withdrawColon = Utils.createColonLabel(220, 180, 20, 28);
-        panel.add(withdrawColon);
 
         JTextField withdrawField = Utils.createTextField(240, 180, 200, 28);
         panel.add(withdrawField);

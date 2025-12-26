@@ -14,45 +14,45 @@ public class ShowAccountInfo extends MainFrame {
         account = accountData.split(",");
 
         //!Account Number Label and Account Number
-        JLabel accNumLabel = Utils.createLabel("Account Number", 90, 180, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        JLabel accNumLabel = Utils.createLabel(Utils.arrLabel[0], 90, 180, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(accNumLabel);
 
-        JLabel accNumInfo = Utils.createLabel(": " + account[0], 240, 180, 200, 28, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        JLabel accNumInfo = Utils.createLabel(account[0], 240, 180, 200, 28, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(accNumInfo);
 
         //!Name Label and Name
-        JLabel nameLabel = Utils.createLabel("Full Name", 90, 220, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        JLabel nameLabel = Utils.createLabel(Utils.arrLabel[1], 90, 220, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(nameLabel);
 
-        JLabel nameInfo = Utils.createLabel(": " + account[1], 240, 220, 200, 28, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        JLabel nameInfo = Utils.createLabel(account[1], 240, 220, 200, 28, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(nameInfo);
 
         //!Account Type Label and Account Type
-        JLabel typeLabel = Utils.createLabel("Account Type", 90, 260, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        JLabel typeLabel = Utils.createLabel(Utils.arrLabel[3], 90, 260, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(typeLabel);
 
-        JLabel typeInfo = Utils.createLabel(": " + account[3], 240, 260, 200, 28, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        JLabel typeInfo = Utils.createLabel(account[3], 240, 260, 200, 28, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(typeInfo);
 
         //!Email Label and Email
-        JLabel emailLabel = Utils.createLabel("Email Address", 90, 300, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        JLabel emailLabel = Utils.createLabel(Utils.arrLabel[4], 90, 300, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(emailLabel);
 
-        JLabel emailInfo = Utils.createLabel(": " + account[4], 240, 300, 200, 28, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        JLabel emailInfo = Utils.createLabel(account[4], 240, 300, 200, 28, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(emailInfo);
 
         //!Phone Label and Phone
-        JLabel phoneLabel = Utils.createLabel("Phone Number", 90, 340, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        JLabel phoneLabel = Utils.createLabel(Utils.arrLabel[5], 90, 340, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(phoneLabel);
 
-        JLabel phoneInfo = Utils.createLabel(": " + account[5], 240, 340, 200, 28, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        JLabel phoneInfo = Utils.createLabel(account[5], 240, 340, 200, 28, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(phoneInfo);
 
         //!Balance Label and Balance
-        JLabel balanceLabel = Utils.createLabel("Balance", 90, 380, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        JLabel balanceLabel = Utils.createLabel(Utils.arrLabel[6], 90, 380, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(balanceLabel);
 
-        JLabel balanceInfo = Utils.createLabel(": " + account[6], 240, 380, 200, 28, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        JLabel balanceInfo = Utils.createLabel(account[6], 240, 380, 200, 28, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(balanceInfo);
 
         //!Exit Button
