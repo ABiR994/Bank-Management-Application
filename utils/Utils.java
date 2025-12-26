@@ -66,6 +66,16 @@ public class Utils {
         return label;
     }
 
+    //* Colon Label
+    public static JLabel createColonLabel(int x, int y, int w, int h) {
+        JLabel colonLabel = new JLabel(":");
+        colonLabel.setBounds(x, y, w, h);
+        colonLabel.setHorizontalAlignment(JLabel.CENTER);
+        colonLabel.setForeground(Utils.SUBHEADING_COLOR);
+        colonLabel.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        return colonLabel;
+    }
+
     //* Create TextField
     public static JTextField createTextField(int x, int y, int w, int h) {
         JTextField textField = new JTextField();
