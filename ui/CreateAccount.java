@@ -85,8 +85,8 @@ public class CreateAccount extends MainFrame {
 
         btnSubmit.addActionListener(e -> {
 
-            String name = nameField.getText();
             String acc = accNumField.getText();
+            String name = nameField.getText();
             String pass = new String(passwordField.getPassword());
             String email = emailField.getText();
             String phone = phoneField.getText();
