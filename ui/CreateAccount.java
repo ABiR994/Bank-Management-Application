@@ -1,6 +1,9 @@
 package ui;
-import java.awt.*;
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.awt.event.FocusListener;
+import java.awt.event.FocusEvent;
 import utils.*;
 import data.*;
 
@@ -22,6 +25,27 @@ public class CreateAccount extends MainFrame {
 
         JTextField dobField = Utils.createTextField(240, 230, 200, 28);
         dobField.setText("DD/MM/YYYY");
+        dobField.setForeground(Color.GRAY);
+
+        //! Add focus listener
+        dobField.addFocusListener(new FocusListener() {
+            @Override
+            public void focusGained(FocusEvent e) {
+                if (dobField.getText().equals("DD/MM/YYYY")) {
+                    dobField.setText("");
+                    dobField.setForeground(Utils.TEXTFIELD_FG);
+                }
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {
+                if (dobField.getText().isEmpty()) {
+                    dobField.setText("DD/MM/YYYY");
+                    dobField.setForeground(Color.GRAY);
+                }
+            }
+        });
+
         panel.add(dobField);
 
         //!Email Label and TextField
@@ -42,11 +66,11 @@ public class CreateAccount extends MainFrame {
         JLabel typeLabel = Utils.createLabel(Utils.arrLabel[3], 90, 350, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(typeLabel);
 
-        JRadioButton checkingButton = Utils.createRadioButton("Savings", 240, 350, 100, 25);
-        panel.add(checkingButton);
-
-        JRadioButton savingsButton = Utils.createRadioButton("Checking", 350, 350, 100, 25);
+        JRadioButton savingsButton = Utils.createRadioButton("Savings", 240, 350, 100, 25);
         panel.add(savingsButton);
+
+        JRadioButton checkingButton = Utils.createRadioButton("Checking", 350, 350, 100, 25);
+        panel.add(checkingButton);
 
         ButtonGroup accountTypeGroup = new ButtonGroup();
         accountTypeGroup.add(savingsButton);
