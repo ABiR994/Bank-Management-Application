@@ -42,14 +42,14 @@ public class CreateAccount extends MainFrame {
         JLabel typeLabel = Utils.createLabel("Account Type:", 90, 350, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(typeLabel);
 
-        JRadioButton checkingButton = Utils.createRadioButton("Saving", 240, 350, 100, 25);
+        JRadioButton checkingButton = Utils.createRadioButton("Savings", 240, 350, 100, 25);
         panel.add(checkingButton);
 
-        JRadioButton savingButton = Utils.createRadioButton("Checking", 350, 350, 100, 25);
-        panel.add(savingButton);
+        JRadioButton savingsButton = Utils.createRadioButton("Checking", 350, 350, 100, 25);
+        panel.add(savingsButton);
 
         ButtonGroup accountTypeGroup = new ButtonGroup();
-        accountTypeGroup.add(savingButton);
+        accountTypeGroup.add(savingsButton);
         accountTypeGroup.add(checkingButton);
 
         //!Account Number Label and TextField
@@ -90,7 +90,7 @@ public class CreateAccount extends MainFrame {
             String phone = phoneField.getText();
             double deposit = Double.parseDouble(depositField.getText());
 
-            String type = savingButton.isSelected() ? "Saving" : "Checking";
+            String type = savingsButton.isSelected() ? "Savings" : "Checking";
 
             String record = acc + "," + name + "," + pass + "," + type + "," + email + "," + phone + "," + deposit;
             AccountFileHandler.saveAccount(record);
