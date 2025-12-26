@@ -2,6 +2,7 @@ package ui;
 import java.awt.*;
 import javax.swing.*;
 import utils.*;
+import data.*;
 
 public class SearchAccount extends MainFrame {
 
@@ -26,8 +27,15 @@ public class SearchAccount extends MainFrame {
         btnExit.addActionListener(e -> this.dispose());
 
         btnSearch.addActionListener(e -> {
-            // handle search logic here
-        Utils.showMessage(this, "Account Found!", "Search Result");
+            String accNo = accNumField.getText();
+            String accountData = AccountFileHandler.findAccount(accNo);
+
+            if (accountData != null) {
+                Utils.showMessage(this, "Account " + accNo + " found!", "Search Result");
+                this.dispose();
+            } else {
+                Utils.showMessage(this, "Account not found!", "Search Result");
+            }
         });
 
         this.setVisible(true);

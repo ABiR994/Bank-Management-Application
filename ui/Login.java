@@ -36,7 +36,7 @@ public class Login extends MainFrame {
             String accNo = accNumField.getText();
             String pass = new String(passwordField.getPassword());
 
-            String accountData = AccountFileHandler.findAccount(accNo, pass);
+            String accountData = AccountFileHandler.validateAccount(accNo, pass);
 
             if (accountData != null) {
                 new Transaction(accountData);

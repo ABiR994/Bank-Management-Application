@@ -20,13 +20,29 @@ public class AccountFileHandler {
         return new BufferedReader(new FileReader(FILE_NAME));
     }
 
-    //! Find account
-    public static String findAccount(String accNo, String password) {
-        try (BufferedReader br = new BufferedReader(new FileReader("accounts.txt"))) {
+    //! Account Validation
+    public static String validateAccount(String accNo, String password) {
+        try (BufferedReader br = new BufferedReader(new FileReader(FILE_NAME))) {
             String line;
             while ((line = br.readLine()) != null) {
                 String[] data = line.split(",");
                 if (data[0].equals(accNo) && data[2].equals(password)) {
+                    return line;
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    //! Find account
+    public static String findAccount(String accNo) {
+        try (BufferedReader br = new BufferedReader(new FileReader(FILE_NAME))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] data = line.split(",");
+                if (data[0].equals(accNo)) {
                     return line;
                 }
             }
