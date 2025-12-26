@@ -36,7 +36,7 @@ public class CreateAccount extends MainFrame {
         panel.add(phoneLabel);
 
         JTextField phoneField = Utils.createTextField(240, 310, 200, 28);
-        panel.add(emailField);
+        panel.add(phoneField);
 
         //!Acount Type Label and RadioButton
         JLabel typeLabel = Utils.createLabel(Utils.arrLabel[3], 90, 350, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
