@@ -4,10 +4,9 @@ import java.awt.*;
 import java.awt.event.*;
 import utils.*;
 
-public class MainFrame extends JFrame {
+public abstract class MainFrame extends JFrame {
 
     protected static JPanel panel;
-    protected static JLabel logoLabel;
 
     public MainFrame(String title, String headingText, int frameWidth, int frameHeight, boolean exit, int h_x, int h_y, int h_width, int h_height) {
 
@@ -34,7 +33,7 @@ public class MainFrame extends JFrame {
 
         //! Logo
         ImageIcon logo = new ImageIcon("assets/logo(50x50).png");
-        logoLabel = new JLabel(logo);
+        JLabel logoLabel = new JLabel(logo);
         logoLabel.setBounds(Utils.centerLogo(frameWidth, 50), 40, 50, 50);
         panel.add(logoLabel);
     }

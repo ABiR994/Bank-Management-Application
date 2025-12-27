@@ -115,16 +115,16 @@ public class Utils {
         dialog.setResizable(false);
         dialog.setLocationRelativeTo(frame);
 
-        // Panel
+        //! Panel
         JPanel panel = new JPanel(new BorderLayout());
         panel.setBackground(Utils.FRAME_BG);
         panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
-        // Message
+        //! Message
         JLabel label = Utils.createLabel(message, 0, 0, 0, 0, JLabel.CENTER, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(label, BorderLayout.CENTER);
 
-        // OK Button
+        //! OK Button
         JButton okButton = Utils.createButton("OK", 0, 0, 80, 30);
         okButton.addActionListener(e -> dialog.dispose());
         JPanel btnPanel = new JPanel();
