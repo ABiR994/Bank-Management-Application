@@ -108,10 +108,10 @@ public class Utils {
     }
 
     //* Show Message
-    public static void showMessage(JFrame frame, String message, String title) {
+    public static void showMessage(JFrame frame, String message, String title, int width) {
 
         JDialog dialog = new JDialog(frame, title, true);
-        dialog.setSize(350, 150);
+        dialog.setSize(width, 150);
         dialog.setLayout(new BorderLayout());
         dialog.setResizable(false);
         dialog.setLocationRelativeTo(frame);
