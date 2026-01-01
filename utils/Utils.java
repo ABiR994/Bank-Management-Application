@@ -174,6 +174,56 @@ public class Utils {
         dialog.setVisible(true);
     }
 
+    //* Show Confirmation Dialog (YES / NO)
+    public static boolean showConfirmDialog(JFrame frame, String message, String title) {
+
+        final boolean[] result = { false };
+
+        JDialog dialog = new JDialog(frame, title, true);
+        dialog.setSize(380, 170);
+        dialog.setLayout(new BorderLayout());
+        dialog.setResizable(false);
+        dialog.setLocationRelativeTo(frame);
+
+        // Main Panel
+        JPanel panel = new JPanel(new BorderLayout());
+        panel.setBackground(Utils.FRAME_BG);
+        panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+
+        // Message
+        JLabel label = Utils.createLabel(
+            message,
+            0, 0, 0, 0,
+            JLabel.CENTER,
+            Utils.SUBHEADING_COLOR,
+            new Font("Segoe UI Semibold", Font.PLAIN, 14)
+        );
+        panel.add(label, BorderLayout.CENTER);
+
+        // Buttons
+        JButton btnYes = Utils.createButton("Yes", 0, 0, 80, 30);
+        JButton btnNo = Utils.createButton("No", 0, 0, 80, 30);
+
+        btnYes.addActionListener(e -> {
+            result[0] = true;
+            dialog.dispose();
+        });
+
+        btnNo.addActionListener(e -> dialog.dispose());
+
+        JPanel btnPanel = new JPanel();
+        btnPanel.setBackground(Utils.FRAME_BG);
+        btnPanel.add(btnYes);
+        btnPanel.add(btnNo);
+
+        panel.add(btnPanel, BorderLayout.SOUTH);
+
+        dialog.add(panel);
+        dialog.setVisible(true);
+
+        return result[0];
+    }
+
     //* Center Logo
     public static int centerLogo(int frameWidth, int LogoWidth) {
         return (frameWidth - LogoWidth) / 2;
