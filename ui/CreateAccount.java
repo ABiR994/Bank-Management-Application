@@ -195,6 +195,7 @@ public class CreateAccount extends MainFrame {
 
             Utils.showMessage(this, "Account Created Successfully!", "Success", 350);
             this.dispose();
+            new Menu();
         });
 
 
