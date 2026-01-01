@@ -137,6 +137,41 @@ public class Utils {
         dialog.setVisible(true);
     }
 
+
+    //* Updated Balance Message
+    public static void updatedBalanceMessage(JFrame frame, String message, String balanceMsg, String title) {
+
+        JDialog dialog = new JDialog(frame, title, true);
+        dialog.setSize(350, 200);
+        dialog.setLayout(new BorderLayout());
+        dialog.setResizable(false);
+        dialog.setLocationRelativeTo(frame);
+
+        //! Panel
+        JPanel panel = new JPanel(new BorderLayout());
+        panel.setBackground(Utils.FRAME_BG);
+        panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+
+        //! Message
+        JLabel label = Utils.createLabel(message, 0, 0, 0, 0, JLabel.CENTER, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 16));
+        panel.add(label, BorderLayout.NORTH);
+
+        //! Balance Message
+        JLabel label2 = Utils.createLabel(balanceMsg, 0, 0, 0, 0, JLabel.CENTER, Utils.TEXTFIELD_FG, new Font("Segoe UI Semibold", Font.PLAIN, 15));
+        panel.add(label2, BorderLayout.CENTER);
+
+        //! OK Button
+        JButton okButton = Utils.createButton("OK", 0, 0, 80, 30);
+        okButton.addActionListener(e -> dialog.dispose());
+        JPanel btnPanel = new JPanel();
+        btnPanel.setBackground(Utils.FRAME_BG);
+        btnPanel.add(okButton);
+        panel.add(btnPanel, BorderLayout.SOUTH);
+
+        dialog.add(panel);
+        dialog.setVisible(true);
+    }
+
     //* Center Logo
     public static int centerLogo(int frameWidth, int LogoWidth) {
         return (frameWidth - LogoWidth) / 2;
