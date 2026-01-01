@@ -6,15 +6,16 @@ import javax.swing.*;
 public class Utils {
     //* Colors
     public static final Color FRAME_BG = new Color(0x0B0B0B);
-    public static final Color PANEL_BG = new Color(0x151515);
+    public static final Color PANEL_BG = new Color(0x171717);
     public static final Color HEADING_COLOR = new Color(0xF5C542);
-    public static final Color SUBHEADING_COLOR = new Color(0xB0B0B0);
-    public static final Color BUTTON_BG = new Color(0xF5C542);
+    public static final Color SUBHEADING_COLOR = new Color(0xB8B8B8);
+    public static final Color BUTTON_BG    = new Color(0xF5C542);
     public static final Color BUTTON_HOVER = new Color(0xFFD966);
     public static final Color BUTTON_PRESS = new Color(0xD4AF37);
-    public static final Color TEXT_COLOR = new Color(0x0B0B0B);
-    public static final Color TEXTFIELD_BG = new Color(0x1E1E1E);
-    public static final Color TEXTFIELD_FG = new Color(0xFFFFFF);
+    public static final Color TEXT_COLOR    = new Color(0x0B0B0B);
+    public static final Color TEXTFIELD_BG  = new Color(0x1F1F1F);
+    public static final Color TEXTFIELD_FG  = new Color(0xFFFFFF);
+    public static final Color BORDER_COLOR = new Color(0x2A2A2A);
 
     public static String[] arrLabel = {"Account Number :", "Full Name             :", "Password              :", "Account Type       :", "Email Address      :", "Phone Number    :", "Balance                 :", "Initial Deposit      :", "Date of Birth        :"};
 
