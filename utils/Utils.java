@@ -185,12 +185,12 @@ public class Utils {
         dialog.setResizable(false);
         dialog.setLocationRelativeTo(frame);
 
-        // Main Panel
+        //! Panel
         JPanel panel = new JPanel(new BorderLayout());
         panel.setBackground(Utils.FRAME_BG);
         panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
-        // Message
+        //! Message
         JLabel label = Utils.createLabel(
             message,
             0, 0, 0, 0,
@@ -200,16 +200,9 @@ public class Utils {
         );
         panel.add(label, BorderLayout.CENTER);
 
-        // Buttons
+        //! Buttons
         JButton btnYes = Utils.createButton("Yes", 0, 0, 80, 30);
         JButton btnNo = Utils.createButton("No", 0, 0, 80, 30);
-
-        btnYes.addActionListener(e -> {
-            result[0] = true;
-            dialog.dispose();
-        });
-
-        btnNo.addActionListener(e -> dialog.dispose());
 
         JPanel btnPanel = new JPanel();
         btnPanel.setBackground(Utils.FRAME_BG);
@@ -220,6 +213,13 @@ public class Utils {
 
         dialog.add(panel);
         dialog.setVisible(true);
+
+        btnYes.addActionListener(e -> {
+            result[0] = true;
+            dialog.dispose();
+        });
+
+        btnNo.addActionListener(e -> dialog.dispose());
 
         return result[0];
     }
