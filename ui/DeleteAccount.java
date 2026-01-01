@@ -32,9 +32,22 @@ public class DeleteAccount extends MainFrame {
         btnExit.addActionListener(e -> this.dispose());
 
         btnDelete.addActionListener(e -> {
-            // handle delete logic here
-            Utils.showMessage(this, "Account Deleted Successfully!", "Deletion Result");
-            this.dispose();
+            String accNo = accNumField.getText();
+            String pass = new String(passwordField.getPassword());
+
+            Account accountData = AccountFileHandler.validateAccount(accNo, pass);
+
+            if(accNo.isEmpty() || pass.isEmpty()) {
+                Utils.showMessage(this, "Please enter account number and password!", "Error", 350);
+                return;
+            }
+
+            if (accountData != null) {
+                AccountFileHandler.deleteAccount(accNo);
+                Utils.showMessage(this, "Account deleted successfully!", "Delete Account", 350);
+            } else {
+                Utils.showMessage(this, "Invalid account number or password!", "Error", 350);
+            }
         });
 
         this.setVisible(true);
