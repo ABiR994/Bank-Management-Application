@@ -24,7 +24,7 @@ public class Deposit extends MainFrame {
         panel.add(btnBack);
 
         btnBack.addActionListener(e -> {
-            this.dispose()
+            this.dispose();
             new Transaction(accountData);
         });
 
