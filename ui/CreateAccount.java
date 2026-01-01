@@ -6,6 +6,7 @@ import java.awt.event.FocusListener;
 import java.awt.event.FocusEvent;
 import utils.*;
 import data.*;
+import model.*;
 
 public class CreateAccount extends MainFrame {
     public CreateAccount() {
@@ -103,7 +104,10 @@ public class CreateAccount extends MainFrame {
         JButton btnExit = Utils.createButton("Exit", 290, 540, 100, 40);
         panel.add(btnExit);
 
-        btnExit.addActionListener(e -> this.dispose());
+        btnExit.addActionListener(e -> {
+            this.dispose();
+            new Menu();
+        });
 
         btnSubmit.addActionListener(e -> {
 

@@ -3,6 +3,7 @@ import java.awt.*;
 import javax.swing.*;
 import utils.*;
 import data.*;
+import model.*;
 
 public class SearchAccount extends MainFrame {
 
@@ -24,7 +25,10 @@ public class SearchAccount extends MainFrame {
         JButton btnExit = Utils.createButton("Exit", 285, 250, 100, 40);
         panel.add(btnExit);
 
-        btnExit.addActionListener(e -> this.dispose());
+        btnExit.addActionListener(e -> {
+            this.dispose();
+            new Menu();
+        });
 
         btnSearch.addActionListener(e -> {
             String accNo = accNumField.getText();

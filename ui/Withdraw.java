@@ -3,9 +3,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import utils.*;
+import data.*;
+import model.*;
 
 public class Withdraw extends MainFrame {
-    public Withdraw(String account) {
+    public Withdraw(Account account) {
         super("Withdraw", "Enter Amount to Withdraw", 550, 400, false, 0, 110, 550, 30);
 
         //! Label and TextField

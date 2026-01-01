@@ -29,19 +29,24 @@ public class Menu extends MainFrame {
         panel.add(btnExit);
 
         btnCreate.addActionListener(e -> {
+            this.dispose();
             new CreateAccount();
         });
 
         btnLogin.addActionListener(e -> {
+            this.dispose();
             new Login();
         });
         btnSearch.addActionListener(e -> {
+            this.dispose();
             new SearchAccount();
         });
         btnDelete.addActionListener(e -> {
+            this.dispose();
             new DeleteAccount();
         });
         btnShow.addActionListener(e -> {
+            this.dispose();
             new ShowAccounts();
         });
         btnExit.addActionListener(e -> System.exit(0));

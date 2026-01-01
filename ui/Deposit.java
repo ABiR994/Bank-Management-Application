@@ -3,6 +3,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import utils.*;
+import data.*;
+import model.*;
 
 
 public class Deposit extends MainFrame {
@@ -25,7 +27,7 @@ public class Deposit extends MainFrame {
 
         btnBack.addActionListener(e -> {
             this.dispose();
-            new Transaction(accountData);
+            new Transaction(account);
         });
 
         btnDeposit.addActionListener(e -> {

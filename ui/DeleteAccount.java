@@ -2,6 +2,8 @@ package ui;
 import java.awt.*;
 import javax.swing.*;
 import utils.*;
+import data.*;
+import model.*;
 
 public class DeleteAccount extends MainFrame {
 
@@ -29,7 +31,10 @@ public class DeleteAccount extends MainFrame {
         JButton btnExit = Utils.createButton("Exit", 285, 330, 100, 40);
         panel.add(btnExit);
 
-        btnExit.addActionListener(e -> this.dispose());
+        btnExit.addActionListener(e -> {
+            this.dispose();
+            new Menu();
+        });
 
         btnDelete.addActionListener(e -> {
             String accNo = accNumField.getText();

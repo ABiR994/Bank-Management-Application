@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.event.*;
 import utils.*;
 import data.*;
+import model.*;
 
 public class Login extends MainFrame {
     public Login() {
@@ -29,7 +30,10 @@ public class Login extends MainFrame {
         JButton btnExit = Utils.createButton("Exit", 285, 330, 100, 40);
         panel.add(btnExit);
 
-        btnExit.addActionListener(e -> this.dispose());
+        btnExit.addActionListener(e -> {
+            this.dispose();
+            new Menu();
+        });
 
         btnLogin.addActionListener(e -> {
 
@@ -39,7 +43,7 @@ public class Login extends MainFrame {
             Account accountData = AccountFileHandler.validateAccount(accNo, pass);
 
             if(accNo.isEmpty() || pass.isEmpty()) {
-                Utils.showMessage(frame, "Please enter account number and password!", "Error", 350);
+                Utils.showMessage(this, "Please enter account number and password!", "Error", 350);
                 return;
             }
 

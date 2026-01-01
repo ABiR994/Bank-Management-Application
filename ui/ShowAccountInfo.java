@@ -3,6 +3,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import utils.*;
+import data.*;
+import model.*;
 
 public class ShowAccountInfo extends MainFrame {
 
@@ -41,21 +43,24 @@ public class ShowAccountInfo extends MainFrame {
         JLabel phoneLabel = Utils.createLabel(Utils.arrLabel[5], 90, 340, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(phoneLabel);
 
-        JLabel phoneInfo = Utils.createLabel(account.getPhone(), 240, 340, 200, 28, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        JLabel phoneInfo = Utils.createLabel(account.getPhoneNum(), 240, 340, 200, 28, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(phoneInfo);
 
         //!Balance Label and Balance
         JLabel balanceLabel = Utils.createLabel(Utils.arrLabel[6], 90, 380, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(balanceLabel);
 
-        JLabel balanceInfo = Utils.createLabel(account.getBalance(), 240, 380, 200, 28, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
+        JLabel balanceInfo = Utils.createLabel(String.valueOf(account.getBalance()), 240, 380, 200, 28, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
         panel.add(balanceInfo);
 
         //!Exit Button
         JButton btnExit = Utils.createButton("Exit", 225, 450, 100, 40);
         panel.add(btnExit);
 
-        btnExit.addActionListener(e -> this.dispose());
+        btnExit.addActionListener(e -> {
+            this.dispose();
+            new Menu();
+        });
 
         this.setVisible(true);
     }
