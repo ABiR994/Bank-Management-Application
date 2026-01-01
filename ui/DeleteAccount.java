@@ -51,13 +51,13 @@ public class DeleteAccount extends MainFrame {
 
             if (!confirm) {
                 return;
+            }
+
+            if (accountData != null) {
+                AccountFileHandler.deleteAccount(accNo);
+                Utils.showMessage(this, "Account deleted successfully!", "Delete Account", 350);
             } else {
-                if (accountData != null) {
-                    AccountFileHandler.deleteAccount(accNo);
-                    Utils.showMessage(this, "Account deleted successfully!", "Delete Account", 350);
-                } else {
-                    Utils.showMessage(this, "Invalid account number or password!", "Error", 350);
-                }
+                Utils.showMessage(this, "Invalid account number or password!", "Error", 350);
             }
         });
 

@@ -204,6 +204,13 @@ public class Utils {
         JButton btnYes = Utils.createButton("Yes", 0, 0, 80, 30);
         JButton btnNo = Utils.createButton("No", 0, 0, 80, 30);
 
+        btnYes.addActionListener(e -> {
+            result[0] = true;
+            dialog.dispose();
+        });
+
+        btnNo.addActionListener(e -> dialog.dispose());
+
         JPanel btnPanel = new JPanel();
         btnPanel.setBackground(Utils.FRAME_BG);
         btnPanel.add(btnYes);
@@ -213,13 +220,6 @@ public class Utils {
 
         dialog.add(panel);
         dialog.setVisible(true);
-
-        btnYes.addActionListener(e -> {
-            result[0] = true;
-            dialog.dispose();
-        });
-
-        btnNo.addActionListener(e -> dialog.dispose());
 
         return result[0];
     }
