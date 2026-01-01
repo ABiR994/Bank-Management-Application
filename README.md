@@ -6,11 +6,9 @@ A **Java Swing–based desktop application** for managing bank accounts with a s
 
 ## 👨‍💻 Contributors
 
-- **Salem Nur Abir**  
-  [![GitHub](https://img.shields.io/badge/GitHub-ABiR994-100000?style=flat&logo=github&logoColor=white)](https://github.com/ABiR994)
+- [![GitHub](https://img.shields.io/badge/GitHub-ABiR994-100000?style=flat&logo=github&logoColor=white)](https://github.com/ABiR994)
 
-- **Opu Roy**  
-  [![GitHub](https://img.shields.io/badge/GitHub-opuroy--62500-100000?style=flat&logo=github&logoColor=white)](https://github.com/opuroy-62500)
+- [![GitHub](https://img.shields.io/badge/GitHub-opuroy--62500-100000?style=flat&logo=github&logoColor=white)](https://github.com/opuroy-62500)
 
 ---
 
