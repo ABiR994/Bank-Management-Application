@@ -40,8 +40,8 @@ public class Deposit extends MainFrame {
                     account.deposit(amount);
                     AccountFileHandler.updateAccount(account);
                     Utils.updatedBalanceMessage(this, "Deposit Successful!", "Updated Balance: " + account.getBalance(), "Success");
-                    new Transaction(account);
                     this.dispose();
+                    new Transaction(account);
                 } else {
                     Utils.showMessage(this, "Invalid amount!", "Error", 350);
                 }
