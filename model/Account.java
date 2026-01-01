@@ -17,7 +17,31 @@ public abstract class Account {
         this.balance = balance;
     }
 
-    public String getAccountNumber() {
+    public void setAccNo(String accNo) {
+        this.accountNumber = accNo;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPhoneNum(String phoneNum) {
+        this.phoneNum = phoneNum;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    public String getAccNo() {
         return accountNumber;
     }
 
@@ -48,12 +72,15 @@ public abstract class Account {
     }
 
     public boolean withdraw(double amount) {
-        if (amount <= balance) {
+        if (canWithdraw(amount)) {
             balance -= amount;
             return true;
+        } else {
+            return false;
         }
-        return false;
     }
 
     public abstract String getType();
+
+    public abstract boolean canWithdraw(double amount);
 }
