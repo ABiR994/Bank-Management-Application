@@ -141,4 +141,46 @@ public class Utils {
         return (frameWidth - LogoWidth) / 2;
     }
 
+
+    //* Convert Account into line
+    public static String accountToLine(Account account) {
+                String accNo = account.getAccNo();
+                String name = account.getName();
+                String password = account.getPassword();
+                String type = account.getType();
+                String email = account.getEmail();
+                String phone = account.getPhoneNum();
+                String balance = String.valueOf(account.getBalance());
+
+                String record = accNo + "," + name + "," + password + "," + type + "," + email + "," + phone + "," + balance;
+                return record;
+    }
+
+    //* Convert line into Account
+    public static Account lineToAccount(String line) {
+        if (line == null || line.isEmpty()) {
+            return null;
+        }
+
+        String[] data = line.split(",");
+
+        if (data.length < 7) {
+            return null;
+        }
+
+        String accNo = data[0];
+        String name = data[1];
+        String password = data[2];
+        String type = data[3];
+        String email = data[4];
+        String phone = data[5];
+        double balance = Double.parseDouble(data[6]);
+
+        if (type.equalsIgnoreCase("Savings")) {
+            return (new SavingsAccount(accNo, name, password, email, phone, balance));
+        } else {
+            return (new CheckingAccount(accNo, name, password, email, phone, balance));
+        }
+    }
+
 }
