@@ -44,21 +44,21 @@ public class ShowAccounts extends MainFrame {
         table.setForeground(Utils.SUBHEADING_COLOR);
 
         //! Grid color
-        table.setGridColor(Utils.SUBHEADING_COLOR.darker());
+        table.setGridColor(Utils.BORDER_COLOR);
 
         //! Header
         JTableHeader header = table.getTableHeader();
         header.setFont(new Font("Segoe UI", Font.BOLD, 14));
         header.setBackground(Utils.BUTTON_BG);
         header.setForeground(Utils.TEXT_COLOR);
-        header.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Utils.SUBHEADING_COLOR));
+        header.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Utils.BORDER_COLOR));
 
         //! Cell Renderer
         DefaultTableCellRenderer center = new DefaultTableCellRenderer();
         center.setHorizontalAlignment(JLabel.CENTER);
         center.setForeground(Utils.SUBHEADING_COLOR);
         center.setBackground(Utils.PANEL_BG);
-        center.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Utils.SUBHEADING_COLOR.darker()));
+        center.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Utils.BORDER_COLOR));
 
         for (int i = 0; i < table.getColumnCount(); i++) {
             table.getColumnModel().getColumn(i).setCellRenderer(center);
