@@ -8,7 +8,7 @@ public abstract class MainFrame extends JFrame {
 
     protected static JPanel panel;
 
-    public MainFrame(String title, String headingText, int frameWidth, int frameHeight, boolean exit, int h_x, int h_y, int h_width, int h_height) {
+    public MainFrame(String title, String headingText, int frameWidth, int frameHeight, int h_x, int h_y, int h_width, int h_height) {
 
         //! Frame settings
         this.setTitle(title);
@@ -16,7 +16,7 @@ public abstract class MainFrame extends JFrame {
         this.setLayout(null);
         this.setResizable(false);
         this.setLocationRelativeTo(null);
-        this.setDefaultCloseOperation(exit ? JFrame.EXIT_ON_CLOSE : JFrame.DISPOSE_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         //! Icon
         ImageIcon icon = new ImageIcon("assets/logo(60x60).png");

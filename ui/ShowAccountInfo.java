@@ -9,7 +9,7 @@ import model.*;
 public class ShowAccountInfo extends MainFrame {
 
     public ShowAccountInfo(Account account) {
-        super("Account Information", "Account Information", 550, 600, false, 0, 110, 550, 30);
+        super("Account Information", "Account Information", 550, 600, 0, 110, 550, 30);
 
         //!Account Number Label and Account Number
         JLabel accNumLabel = Utils.createLabel(Utils.arrLabel[0], 90, 180, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));

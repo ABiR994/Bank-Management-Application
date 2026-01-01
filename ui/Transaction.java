@@ -8,7 +8,7 @@ import model.*;
 public class Transaction extends MainFrame {
 
     public Transaction(Account accountData) {
-        super("Transaction", "Transaction Menu", 500, 500, false, 0, 105, 500, 30);
+        super("Transaction", "Transaction Menu", 500, 500, 0, 105, 500, 30);
 
         //! Welcome message and account balance
         JLabel info = Utils.createLabel("Welcome " + accountData.getName() + " | Balance: " + accountData.getBalance(), 50, 150, 400, 25, JLabel.CENTER, Utils.SUBHEADING_COLOR, new Font("Segoe UI", Font.PLAIN, 14));

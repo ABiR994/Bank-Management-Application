@@ -9,7 +9,7 @@ public class DeleteAccount extends MainFrame {
 
     public DeleteAccount() {
 
-        super("Delete Bank Account", "Delete your Bank Account", 550, 500, false, 0, 110, 550, 30);
+        super("Delete Bank Account", "Delete your Bank Account", 550, 500, 0, 110, 550, 30);
 
         //!Account Number Label and TextField
         JLabel accNumLabel = Utils.createLabel(Utils.arrLabel[0], 90, 200, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));

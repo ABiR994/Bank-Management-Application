@@ -12,7 +12,7 @@ import utils.*;
 public class ShowAccounts extends MainFrame {
 
     public ShowAccounts() {
-        super("All Bank Accounts", "Displaying All Bank Accounts", 900, 650, false, 0, 110, 900, 30);
+        super("All Bank Accounts", "Displaying All Bank Accounts", 900, 650, 0, 110, 900, 30);
 
         //! Columns
         String[] columnNames = {"Account Number", "Full Name", "Account Type", "Email", "Phone", "Balance"};

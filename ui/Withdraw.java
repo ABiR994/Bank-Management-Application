@@ -8,7 +8,7 @@ import model.*;
 
 public class Withdraw extends MainFrame {
     public Withdraw(Account account) {
-        super("Withdraw", "Enter Amount to Withdraw", 550, 400, false, 0, 110, 550, 30);
+        super("Withdraw", "Enter Amount to Withdraw", 550, 400, 0, 110, 550, 30);
 
         //! Label and TextField
         JLabel withdrawLabel = Utils.createLabel("Withdraw Amount :", 90, 180, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));

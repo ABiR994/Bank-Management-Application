@@ -11,7 +11,7 @@ import model.*;
 public class CreateAccount extends MainFrame {
     public CreateAccount() {
 
-        super("Create New Account", "Create a New Bank Account", 550, 750, false, 0, 110, 550, 30);
+        super("Create New Account", "Create a New Bank Account", 550, 750, 0, 110, 550, 30);
 
         //!Name Label and TextField
         JLabel nameLabel = Utils.createLabel(Utils.arrLabel[1], 90, 190, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));

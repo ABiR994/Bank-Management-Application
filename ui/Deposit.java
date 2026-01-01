@@ -9,7 +9,7 @@ import model.*;
 
 public class Deposit extends MainFrame {
     public Deposit(Account account) {
-        super("Deposit", "Enter Amount to Deposit", 550, 400, false, 0, 110, 550, 30);
+        super("Deposit", "Enter Amount to Deposit", 550, 400, 0, 110, 550, 30);
 
         //! Label and TextField
         JLabel depositLabel = Utils.createLabel("Deposit Amount :", 90, 180, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));

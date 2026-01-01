@@ -9,7 +9,7 @@ public class SearchAccount extends MainFrame {
 
     public SearchAccount() {
 
-        super("Search Bank Account", "Search for a Bank Account", 550, 400, false, 0, 110, 550, 30);
+        super("Search Bank Account", "Search for a Bank Account", 550, 400, 0, 110, 550, 30);
 
         //!Account Number Label and TextField
         JLabel accNumLabel = Utils.createLabel(Utils.arrLabel[0], 90, 180, 140, 25, JLabel.LEFT, Utils.SUBHEADING_COLOR, new Font("Segoe UI Semibold", Font.PLAIN, 14));
