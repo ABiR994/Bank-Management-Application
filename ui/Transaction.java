@@ -5,16 +5,14 @@ import utils.*;
 
 public class Transaction extends MainFrame {
 
-    private String[] account;
-
-    public Transaction(String accountData) {
+    public Transaction(Account accountData) {
         super("Transaction", "Transaction Menu", 500, 500, false, 0, 105, 500, 30);
 
         //! Split account data
         account = accountData.split(",");
 
         //! Welcome message and account balance
-        JLabel info = Utils.createLabel("Welcome " + account[1] + " | Balance: " + account[6], 50, 150, 400, 25, JLabel.CENTER, Utils.SUBHEADING_COLOR, new Font("Segoe UI", Font.PLAIN, 14));
+        JLabel info = Utils.createLabel("Welcome " + accountData.getName() + " | Balance: " + accountData.getBalance(), 50, 150, 400, 25, JLabel.CENTER, Utils.SUBHEADING_COLOR, new Font("Segoe UI", Font.PLAIN, 14));
         panel.add(info);
 
         //! Buttons
@@ -24,10 +22,10 @@ public class Transaction extends MainFrame {
         JButton btnWithdraw = Utils.createButton("Withdraw", 150, 260, 200, 45);
         panel.add(btnWithdraw);
 
-        JButton btnExit = Utils.createButton("Exit", 150, 320, 200, 45);
-        panel.add(btnExit);
+        JButton btnLogout = Utils.createButton("Logout", 150, 320, 200, 45);
+        panel.add(btnLogout);
 
-        btnExit.addActionListener(e -> this.dispose());
+        btnLogout.addActionListener(e -> this.dispose());
 
         btnDeposit.addActionListener(e -> {
             new Deposit(accountData);
