@@ -28,13 +28,18 @@ public class SearchAccount extends MainFrame {
 
         btnSearch.addActionListener(e -> {
             String accNo = accNumField.getText();
-            String accountData = AccountFileHandler.findAccount(accNo);
+            Account accountData = AccountFileHandler.findAccount(accNo);
+
+            if(accNo.isEmpty()) {
+                Utils.showMessage(this, "Please enter account number to search!", "Error", 350);
+                return;
+            }
 
             if (accountData != null) {
-                new ShowAccountInfo(accountData);
                 this.dispose();
+                new ShowAccountInfo(accountData);
             } else {
-                Utils.showMessage(this, "Account not found!", "Search Result");
+                Utils.showMessage(this, "Account not found!", "Search Result", 350);
             }
         });
 
