@@ -36,13 +36,18 @@ public class Login extends MainFrame {
             String accNo = accNumField.getText();
             String pass = new String(passwordField.getPassword());
 
-            String accountData = AccountFileHandler.validateAccount(accNo, pass);
+            Account accountData = AccountFileHandler.validateAccount(accNo, pass);
+
+            if(accNo.isEmpty() || pass.isEmpty()) {
+                Utils.showMessage(frame, "Please enter account number and password!", "Error", 350);
+                return;
+            }
 
             if (accountData != null) {
                 new Transaction(accountData);
                 this.dispose();
             } else {
-                Utils.showMessage(this, "Invalid account number or password!", "Login Failed");
+                Utils.showMessage(this, "Invalid account number or password!", "Login Failed", 350);
             }
         });
 
