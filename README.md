@@ -160,6 +160,6 @@ Example:
 
 ## 🔚 Summary
 
-This **Bank Management Application** is a desktop banking simulator built with pure Java using Swing for the GUI. It demonstrates core object-oriented programming principles—including encapsulation, inheritance, abstraction, and polymorphism—alongside file-based data persistence and a clean, dark-themed user interface. Designed with modularity in mind, each screen is implemented as a separate `JFrame`, making the code easy to read, maintain, and extend. Ideal for learning Java OOP, file I/O, and desktop UI development.
+This **Bank Management Application** is a desktop banking simulator built with pure Java using Swing for the GUI. It demonstrates core object-oriented programming principles, including encapsulation, inheritance, abstraction, and polymorphism, alongside file-based data persistence and a clean, dark-themed user interface. Designed with modularity in mind, each screen is implemented as a separate `JFrame`, making the code easy to read, maintain, and extend. Ideal for learning Java OOP, file I/O, and desktop UI development.
 
 ---
