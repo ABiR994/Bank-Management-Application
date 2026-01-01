@@ -112,14 +112,84 @@ public class CreateAccount extends MainFrame {
             String pass = new String(passwordField.getPassword());
             String email = emailField.getText();
             String phone = phoneField.getText();
-            double deposit = Double.parseDouble(depositField.getText());
+            String dob = dobField.getText();
+            double deposit;
+            String type;
 
-            String type = savingsButton.isSelected() ? "Savings" : "Checking";
+            //? Validations
 
-            String record = acc + "," + name + "," + pass + "," + type + "," + email + "," + phone + "," + deposit;
-            AccountFileHandler.saveAccount(record);
+            //! Check if any field is empty
+            if (acc.isEmpty() || name.isEmpty() || pass.isEmpty() || email.isEmpty() || phone.isEmpty() || dob.isEmpty() ||dob.equals("DD/MM/YYYY") || depositField.getText().isEmpty()) {
+                Utils.showMessage(this, "Please fill all the required fields.", "Incomplete Form", 350);
+                return;
+            }
 
-            Utils.showMessage(this, "Account Created Successfully!", "Success");
+            //! Check if account number already exists
+            if (AccountFileHandler.findAccount(acc) != null) {
+                Utils.showMessage(this, "Account number already exists.", "Duplicate Account", 350);
+                return;
+            }
+
+            //! Check if password is at least 8 characters long
+            if(pass.length() < 8) {
+                Utils.showMessage(this, "Password must be at least 8 characters long.", "Weak Password", 350);
+                return;
+            }
+
+            //! Check if phone number is valid
+            if(!phone.matches("\\d+")) {
+                Utils.showMessage(this, "Phone Enter a valid phone number.", "Invalid Phone Number", 350);
+                return;
+            }
+
+            //! Check if phone number is 11 digits long
+            if(phone.length() != 11) {
+                Utils.showMessage(this, "Phone number must be 11 digits long.", "Invalid Phone Number", 350);
+                return;
+            }
+
+            //! Check if date of birth is valid
+            if(!dob.matches("\\d{2}/\\d{2}/\\d{4}")) {
+                Utils.showMessage(this, "Please enter a valid date of birth (DD/MM/YYYY).", "Invalid Date", 400);
+                return;
+            }
+
+            //! Convert initial deposit to double
+            try {
+                deposit = Double.parseDouble(depositField.getText());
+            } catch (NumberFormatException ex) {
+                Utils.showMessage(this, "Please enter a valid amount for Initial Deposit.", "Invalid Input", 370);
+                return;
+            }
+
+            //! Check if initial deposit is at least 1000
+            if(deposit < 1000) {
+                Utils.showMessage(this, "Initial Deposit must be at least 1000.", "Invalid Input", 350);
+                return;
+            }
+
+            //! Check if account type is selected
+            if (savingsButton.isSelected()) {
+                type = "Savings";
+            } else if (checkingButton.isSelected()) {
+                type = "Checking";
+            } else {
+                Utils.showMessage(this, "Please select an account type.", "Input Required", 350);
+                return;
+            }
+
+            //! Save account to file
+            Account account;
+
+            if (type.equals("Savings")) {
+                account = new SavingsAccount(acc, name, pass, email, phone, deposit);
+            } else {
+                account = new CheckingAccount(acc, name, pass, email, phone, deposit);
+            }
+
+            AccountFileHandler.saveAccount(account);
+
+            Utils.showMessage(this, "Account Created Successfully!", "Success", 350);
             this.dispose();
         });
 
